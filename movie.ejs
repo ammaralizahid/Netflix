@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <section class="movie_section">
+        <div class="showcase-top">
+            <a class="logo" href="/">
+                <img src="/assets/img/logo.png" alt="Netflix Logo">
+            </a>
+            <a href="#" class="btn btn-rounded">Sign In</a>
+        </div>
+        <!-- SPECIAL MOVIE SECTION -->
+        <div class="section">
+            <div class="hero-slide-item">
+                <img src="<%= film.Poster %>  " alt="">
+                <div class="overlay"></div>
+                <div class="hero-slide-item-content">
+                    <div class="item-content-wraper">
+                        <div class="item-content-title">
+                            <%= film.Title %> 
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <span>Genre: <%= film.Genre %> </span>
+                            </div>                            
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span><%= film.imdbRating %> </span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span><%= film.Runtime %> </span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-movie-play"></i>
+                                <span><%= film.Released %> </span>
+                            </div>
+                        </div>
+                        <div class="item-content-description">
+                            <%= film.Plot %> 
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <span>Cast: <%= film.Actors %> </span>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END SPECIAL MOVIE SECTION -->
+    </section>    
+</body>
+</html>
