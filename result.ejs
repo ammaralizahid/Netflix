@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netly</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section class="movie_section">
+            <div class="showcase-top">
+                <a class="logo" href="/">
+                    <img src="assets/img/logo.png" alt="Netflix Logo">
+                </a>
+                <a href="#" class="btn btn-rounded">Sign In</a>
+            </div>
+        <div class="container">
+            <% data["Search"].forEach((movies)=> { %> 
+            <div class="movie_card">
+                <div class="movie-image movie-image-1">
+                    <img src="<%= movies["Poster"] %>" alt="">
+                </div>
+                <div class="movie-info">
+                    <p class="title"><%= movies["Title"] %> </p>
+                    <p class="genres"><%= movies["Year"] %> </p>
+                    <div class="movie-text">
+                        <p class="movie_type"><%= movies["Type"] %> </p>
+                    </div>
+                    <a class="read_more" name="id" href="/movie_description/<%= movies["imdbID"] %>"  >Read More</a>
+                </div>
+            </div>
+            <% }) %> 
+        </div>
+    </section>
+</body>
+</html>
